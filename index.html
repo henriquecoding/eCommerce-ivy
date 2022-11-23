@@ -15,24 +15,33 @@
 <body>
   
   <header id="header">
-    <nav class="navbar">
+    <section class="header-container">
       <a href="#"><img class="logo" src="assets/images/ivy-logo.png" alt="ivy logo"></a>
-      <ul>
-        <li><a class="navbar-link active" href="index.html">Home</a></li>
-        <li><a class="navbar-link" href="blog.html">Blog</a></li>
-        <li><a class="navbar-link" href="about.html">Sobre</a></li>
-        <li><a class="navbar-link" href="contact.html">Contacto</a></li>
-        <li><a class="navbar-link" href="cart.html"><i class="fa-solid fa-bag-shopping"></i></a></li>
-      </ul>
-    </nav>
+      <nav class="navbar">
+        <ul>
+          <span class="close"><i id="close" class="fa-solid fa-xmark"></i></span>
+          <li><a class="navbar-link active" href="index.html">Home</a></li>
+          <li><a class="navbar-link" href="blog.html">Blog</a></li>
+          <li><a class="navbar-link" href="about.html">Sobre</a></li>
+          <li><a class="navbar-link" href="user.html"><i class="fa-solid fa-user"></i></i></a></li>
+          <li><a class="navbar-link" href="cart.html"><i class="fa-solid fa-bag-shopping"></i></a></li>
+        </ul>
+      </nav>
+      <div id="mobile">
+        <a class="navbar-link" href="cart.html"><i class="fa-solid fa-bag-shopping"></i></a>
+        <span class="navbar-link"><i id="bar" class="fa-solid fa-outdent"></i></span>
+      </div>
+    </section>
   </header>
 
   <section id="hero">
-    <h4>Aproveite essa oferta</h4>
-    <h2>Super descontos</h2>
-    <h1>Em todos os produtos</h1>
-    <p>Poupe mais com os cupons!</p>
-    <button>Compre Já</button>
+    <article class="hero-container">
+      <h4>Aproveite essa oferta</h4>
+      <h2>O conforto que</h2>
+      <h1>se adequa a você!</h1>
+      <p>Poupe mais com os cupons!</p>
+      <button>Compre Já</button>
+    </article>
   </section>
 
   <section id="features">
@@ -208,15 +217,45 @@
   <section id="newsletter">
     <article class="newsletter-container">
       <div class="news-text">
-        <h2 class="newsletter-title">Inscreva-se para receber promoções</h2>
+        <h2 class="newsletter-title">Subscreva para receber promoções</h2>
         <p>Receba e-mails das suas últimas compras e ofertas</p>
       </div>
       <form action="" method="post">
         <input type="email" name="email" id="email" placeholder="Digite seu e-mail">
-        <button type="submit">Enviar</button>
+        <button id="newsletter-btn" type="submit">Enviar</button>
       </form>
     </article>
   </section>
+
+  <footer>
+    <section class="footer-container">
+      <article class="footer-column">
+        <h3>Contacto</h3>
+        <ul>
+          <li><strong>Telemóvel: </strong>+351 987 654 321</li>
+          <li><strong>Horário: </strong> 10:00 - 18:00 . Seg - Sáb</li>
+        </ul>
+        <h3>Siga-nos</h3>
+        <a href="https://www.instagram.com/ivy.handmade.pt/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i></a>
+      </article>
+      <article class="footer-column">
+        <h3>Minha conta</h3>
+        <ul>
+          <li><a href="#">Login</a></li>
+          <li><a href="#">Ver carrinho</a></li>
+          <li><a href="#">Lista de desejos</a></li>
+          <li><a href="#">Rastrear minha compra</a></li>
+          <li><a href="#">Ajuda</a></li>
+        </ul>
+      </article>
+      <article class="footer-column">
+        <h3>Métodos de Pagamento</h3>
+        <img class="paymentMethods" src="assets/images/paymentMethods.png" alt="Métodos de Pagamento">
+      </article>
+    </section>
+    <h3><footer>&copy; Copyright - ivy. Todos os direitos reservados.</footer>
+    </h3>
+  </footer>
 
   <script src="assets/js/script.js"></script>
 </body>
