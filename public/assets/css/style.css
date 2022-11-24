@@ -50,6 +50,10 @@ p {
   margin: 15px 0;
 }
 
+.titles {
+  text-align: center;
+}
+
 /* Header */
 
 #header {
@@ -83,7 +87,7 @@ p {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  gap: 50px;
+  gap: 40px;
 }
 
 .navbar-link {
@@ -123,47 +127,55 @@ p {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: top 25% right 0;
-
+  height: 320px;
+  display: flex;
+  align-items: center;
 }
 
 .hero-container {
-  height: 550px;
-  width: 90%;
-  max-width: 980px;
   margin: 0 auto;
+  width: auto;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   justify-content: center;
-}
-
-#hero h4 {
-  padding: 7px 0;
+  padding: 10px 20px;
+  background-color: rgba(255, 247, 229, 0.7);
+  border-radius: 5px;
+  box-shadow: var(--shadow);
 }
 
 #hero h2 {
-  color: var(--color-white);
+  font: 900 3rem 'Ubuntu', sans-serif;
+  color: var(--color-black);
+  animation: glitch .7s infinite ease;
 }
 
-#hero h1 {
-  color: var(--color-green);
-  text-shadow: var(--shadow);
+@keyframes glitch {
+  0% { text-shadow: 0 0 1px var(--color-green); }
+  100% { text-shadow: 3.5px 3.5px 2px var(--color-green);}
 }
 
-#hero p {
-  color: var(--color-white);
+#hero h3 {
+  font: 400 2rem 'Ubuntu', sans-serif;
+  color: var(--color-black);
+  text-align: center;
 }
 
 #hero button {
-  background-image: url('../images/button.png');
   background-color: transparent;
-  background-repeat: no-repeat;
-  color: var(--color-white);
   border: 0;
-  padding: 10px 100px 14px 55px;
-  cursor: pointer;
   font: var(--big-font);
-  text-shadow: var(--shadow);
+  margin: 15px;
+}
+
+#hero button a {
+  color: var(--color-black);
+  text-decoration: none;
+}
+
+#hero button a:hover {
+  text-decoration: underline;
 }
 
 /* Vantagens */
@@ -192,11 +204,39 @@ p {
   background-color: var(--color-pastel-green);
 }
 
-/* Produtos */
+/* Modelos */
 
-.products {
-  text-align: center;
+.models-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  gap: 20px;
+  margin: 25px;
+  flex-wrap: wrap;
 }
+
+.models-container div {
+  width: 100%;
+  max-width: 250px;
+  background-color: #fff;
+  padding: 10px;
+  box-shadow: 0 0 5px var(--color-secondary);
+}
+
+.models-container div img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  object-position: center;
+  position: relative;
+}
+
+.models-container div h3 {
+  font: var(--big-font);
+  margin: 20px 0;
+}
+
+/* Produtos */
 
 .products-container {
   display: flex;
@@ -204,16 +244,13 @@ p {
   gap: 20px;
   width: 100%;
   max-width: 980px;
-  margin: 0 auto;
+  margin: 25px auto;
   flex-wrap: wrap;
 }
 
 .product {
-  width: 20%;
+  width: 30%;
   min-width: 200px;
-  padding: 10px 12px;
-  border: 3px solid var(--color-primary);
-  border-radius: 10px;
   cursor: pointer; 
   transition: var(--transition);
   position: relative;
@@ -233,8 +270,7 @@ p {
   align-items: center;
   justify-content: center;
   width: 100%;
-  height: 200px;
-  border-radius: 20px;
+  height: 350px;
 }
 
 .product .container-img img {
@@ -242,20 +278,40 @@ p {
   height: 100%;
   -o-object-fit: cover;
   object-fit: cover;
-  border-radius: 20px;
+  position: relative;
+}
+
+.sizes {
+  display: none; 
+}
+
+.container-img:hover > .sizes {
+  display: flex;
+  position: absolute;
+  top: 312px;
+  width: 100%;
+}
+
+.sizes div {
+  font: var(--big-font);
+  color: var(--color-white);
+  background-color: var(--color-black);
+  width: 16.67%;
+  padding: 7px 0;
+  transition: var(--transition);
+}
+
+.sizes div:hover {
+  background-color: var(--color-secondary);
 }
 
 .product-description {
   text-align: start;
-  padding: 10px 0;
-}
-
-.product-description span {
-  color: var(--color-secondary);
+  padding: 10px 0 0 0;
 }
 
 .product-description h3 {
-  padding-top: 7px;
+  padding: 7px;
   color: var(--color-black);
   font: var(--normal-font);
 }
@@ -267,7 +323,7 @@ p {
 
 .product-description .product-price {
   padding-top: 7px;
-  font: var(--big-font);
+  font: 600 1.5rem 'Ubuntu', sans-serif;
   color: var(--color-secondary);
 }
 
@@ -275,8 +331,8 @@ p {
   font-size: 30px;
   color: var(--color-secondary);
   position: absolute;
-  bottom: 30px;
-  right: 30px;
+  bottom: 15px;
+  right: 15px;
   transform: scale(1);
   transition: var(--transition);
 }
@@ -289,7 +345,6 @@ p {
 
 #newsletter {
   background-color: var(--color-black);
-  margin: 20px 0 0 0;
 }
 
 .newsletter-container {
@@ -427,6 +482,25 @@ body::-webkit-scrollbar-corner {
   background-color: var(--color-black);
 }
 
+/*    Página da loja    */
+
+#shopBanner {
+  background-image: url('../images/pexels-antoni-shkraba-7091840.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.shopBanner-container {
+  height: 450px;
+  width: 90%;
+  max-width: 980px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
 @media (max-width: 768px)  { 
 
   /* Header */
@@ -480,5 +554,9 @@ body::-webkit-scrollbar-corner {
 @media (max-width: 460px) {
   #features {
     justify-content: center;
+  }
+
+  .product {
+    width: 250px;
   }
 }
