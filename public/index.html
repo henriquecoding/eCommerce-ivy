@@ -20,17 +20,42 @@
       <nav class="navbar">
         <ul>
           <span class="close"><i id="close" class="fa-solid fa-xmark"></i></span>
-          <li><a class="navbar-link active" href="index.html">Home</a></li>
-          <li><a class="navbar-link" href="shop.html">Loja</a></li>
-          <li><a class="navbar-link" href="blog.html">Blog</a></li>
-          <li><a class="navbar-link" href="about.html">Sobre</a></li>
-          <li><a class="navbar-link" href="user.html"><i class="fa-solid fa-user"></i></i></a></li>
-          <li><a class="navbar-link" href="cart.html"><i class="fa-solid fa-bag-shopping"></i></a></li>
+          <li><input type="search" name="search" id="search" placeholder="O que você procura?"></li>
+          <li><a class="navbar-item active" href="index.html">Home</a></li>
+          <li><a class="navbar-item" href="shop.html">Loja</a></li>
+          <li><a class="navbar-item" href="about.html">Sobre</a></li>
+          <li><a class="navbar-item" href="user.html"><i class="fa-solid fa-user"></i></i></a></li>
         </ul>
+        <article class="shoppingBag">
+          <div class="bag-icon">
+            <i class="fa-solid fa-bag-shopping navbar-item"></i>
+            <div class="total-items-in-cart">
+                0
+            </div>
+          </div>
+          <div class="shoppingBag-container">
+            <div class="shoppingBag-header">
+              <div class="column1">Item</div>
+              <div class="column2">Preço Uni.</div>
+              <div class="column3">Unidades</div>
+            </div>
+            <div class="shoppingBag-items">
+                <!-- Aqui renderizará os itens na Bolsa -->
+            </div>
+            <div class="shoppingBag-footer">
+                <div class="subtotal">
+                    Subtotal (0 items): $0
+                </div>
+                <div class="checkout">
+                    Proceed to checkout
+                </div>
+            </div>
+          </div>
+        </article>
       </nav>
       <div id="mobile">
-        <a class="navbar-link" href="cart.html"><i class="fa-solid fa-bag-shopping"></i></a>
-        <span class="navbar-link"><i id="bar" class="fa-solid fa-outdent"></i></span>
+        <a class="navbar-item" href="cart.html"><i class="fa-solid fa-bag-shopping"></i></a>
+        <span class="navbar-item"><i id="bar" class="fa-solid fa-outdent"></i></span>
       </div>
     </section>
   </header>
@@ -83,114 +108,6 @@
   <section id="products" class="titles">
     <h2>Produtos em Destaque</h2>
     <article class="products-container">
-      <article class="product">
-        <div class="container-img">
-          <img src="assets/images/products/nati-melnychuk-tFbsY14l-io-unsplash.jpg" alt="Roupa íntima feminina">
-          <div class="sizes">
-            <div>XS</div>
-            <div>S</div>
-            <div>M</div>
-            <div>L</div>
-            <div>XL</div>
-            <div><i class="fa-solid fa-gear"></i></div>
-          </div>
-        </div>
-        <div class="product-description">
-          <h3>Sutiã Preto</h3>
-          <h3 class="product-price">&euro;3</h3>
-        </div>
-        <a href="#"><i class="fa-solid fa-cart-shopping cart"></i></a>
-      </article>
-      <article class="product">
-        <div class="container-img">
-          <img src="assets/images/products/nati-melnychuk-Z00Dhp_tk38-unsplash.jpg" alt="Roupa íntima feminina">
-          <div class="sizes">
-            <div>XS</div>
-            <div>S</div>
-            <div>M</div>
-            <div>L</div>
-            <div>XL</div>
-            <div><i class="fa-solid fa-gear"></i></div>
-          </div>
-        </div>
-        <div class="product-description">
-          <h3>Sutiã Azul</h3>
-          <h3 class="product-price">&euro;3</h3>
-        </div>
-        <a href="#"><i class="fa-solid fa-cart-shopping cart"></i></a>
-      </article>
-      <article class="product">
-        <div class="container-img">
-          <img src="assets/images/products/uliana-kopanytsia-HjZwhXuRf3Q-unsplash.jpg" alt="Roupa íntima feminina">
-          <div class="sizes">
-            <div>XS</div>
-            <div>S</div>
-            <div>M</div>
-            <div>L</div>
-            <div>XL</div>
-            <div><i class="fa-solid fa-gear"></i></div>
-          </div>
-        </div>
-        <div class="product-description">
-          <h3>Conjunto</h3>
-          <h3 class="product-price">&euro;3</h3>
-        </div>
-        <a href="#"><i class="fa-solid fa-cart-shopping cart"></i></a>
-      </article>
-      <article class="product">
-        <div class="container-img">
-          <img src="assets/images/products/uliana-kopanytsia-slCC8-LEJ_E-unsplash.jpg" alt="Roupa íntima feminina">
-          <div class="sizes">
-            <div>XS</div>
-            <div>S</div>
-            <div>M</div>
-            <div>L</div>
-            <div>XL</div>
-            <div><i class="fa-solid fa-gear"></i></div>
-          </div>
-        </div>
-        <div class="product-description">
-          <h3>Sutiãs</h3>
-          <h3 class="product-price">&euro;3</h3>
-        </div>
-        <a href="#"><i class="fa-solid fa-cart-shopping cart"></i></a>
-      </article>
-      <article class="product">
-        <div class="container-img">
-          <img src="assets/images/products/penki-ir-2-Z6KtjSAB8-unsplash.jpg" alt="Roupa íntima feminina">
-          <div class="sizes">
-            <div>XS</div>
-            <div>S</div>
-            <div>M</div>
-            <div>L</div>
-            <div>XL</div>
-            <div><i class="fa-solid fa-gear"></i></div>
-          </div>
-        </div>
-        <div class="product-description">
-          <h3>Cuecas delicadas</h3>
-          <h3 class="product-price">&euro;3</h3>
-        </div>
-        <a href="#"><i class="fa-solid fa-cart-shopping cart"></i></a>
-      </article>
-      <article class="product">
-        <div class="container-img">
-          <img src="assets/images/products/penki-ir-BOk1gFkzsbE-unsplash.jpg" alt="Roupa íntima feminina">
-          <div class="sizes">
-            <div>XS</div>
-            <div>S</div>
-            <div>M</div>
-            <div>L</div>
-            <div>XL</div>
-            <div><i class="fa-solid fa-gear"></i></div>
-          </div>
-        </div>
-        <div class="product-description">
-          <h3>Cuecas delicadas</h3>
-          <h3 class="product-price">&euro;3</h3>
-        </div>
-        <a href="#"><i class="fa-solid fa-cart-shopping cart"></i></a>
-      </article>
     </article>
   </section>
 
@@ -238,5 +155,7 @@
   </footer>
 
   <script src="assets/js/script.js"></script>
+  <script src="assets/js/products.js"></script>
+  <script src="assets/js/cart.js"></script>
 </body>
 </html>

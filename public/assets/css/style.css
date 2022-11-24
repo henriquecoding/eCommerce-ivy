@@ -80,17 +80,26 @@ p {
 }
 
 .navbar {
-  width: 50%;
+  display: flex;
+  width: 90%;
+  position: relative;
 }
 
 .navbar ul {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  gap: 40px;
+  gap: 30px;
 }
 
-.navbar-link {
+#search {
+  width: 270px;
+  height: 30px;
+  font: var(--normal-font);
+  border-radius: 5px;
+}
+
+.navbar-item {
   text-decoration: none;
   font: var(--header-font);
   color: var(--color-black);
@@ -98,11 +107,11 @@ p {
   position: relative;
 }
 
-.navbar-link:hover, .navbar-link.active {
+.navbar-item:hover, .navbar-item.active {
   color: var(--color-secondary);
 }
 
-.active::after, .navbar-link:hover::after {
+.active::after, .navbar-item:hover::after {
   content: '';
   width: 40%;
   height: 2px;
@@ -110,6 +119,84 @@ p {
   position: absolute;
   bottom: -4px;
   left: 0;
+}
+
+.shoppingBag {
+  display: flex;
+  margin-left: 30px;
+}
+
+.bag-icon {
+  z-index: 5;
+}
+
+.shoppingBag-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 400px;
+  position: absolute;
+  top: -30px;
+  right: -55px;
+  background-color: var(--color-green);
+  z-index: 3;
+}
+
+.shoppingBag-header {
+  margin-top: 100px;
+  display: flex;
+  font: var(--normal-font);
+  margin-left: 30px;
+}
+
+.shoppingBag-header .column1 {
+  width: 150px;
+  text-align: center;
+}
+
+.shoppingBag-header .column2 {
+  width: 80px;
+  text-align: center;
+  margin: 0 10px;
+}
+
+.shoppingBag-item {
+  display: flex;
+  width: 100%;
+  height: 400px;
+  margin: 20px 0;
+}
+
+.shoppingBag-item .itemInfo-container {
+  width: 150px;
+  height: 200px;
+  margin-left: 30px;
+}
+
+.shoppingBag-item .itemInfo {
+  display: flex;
+  flex-direction: column;
+}
+
+.shoppingBag-item .itemInfo img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+}
+
+.shoppingBag-item .itemInfo-container h3 {
+  font: var(--normal-font);
+  padding-top: 15px;
+}
+
+.unit-price {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  height: 150px;
+  font: var(--big-font);
+  color: var(--color-black);
 }
 
 #mobile {
@@ -271,6 +358,7 @@ p {
   justify-content: center;
   width: 100%;
   height: 350px;
+  position: relative;
 }
 
 .product .container-img img {
@@ -278,7 +366,20 @@ p {
   height: 100%;
   -o-object-fit: cover;
   object-fit: cover;
-  position: relative;
+}
+
+.container-img > #heart {
+  position: absolute;
+  color: var(--color-secondary);
+  top: 20px;
+  right: 20px;
+  font-size: 1.7rem;
+  text-shadow: 0 0 7px var(--color-black);
+  transition: var(--transition);
+} 
+
+.container-img > #heart:hover {
+  color: var(--color-primary);
 }
 
 .sizes {
