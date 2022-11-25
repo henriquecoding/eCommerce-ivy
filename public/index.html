@@ -27,34 +27,33 @@
           <li><a class="navbar-item" href="user.html"><i class="fa-solid fa-user"></i></i></a></li>
         </ul>
         <article class="shoppingBag">
-          <div class="bag-icon">
-            <i class="fa-solid fa-bag-shopping navbar-item"></i>
+            <img  src="assets/images/shoppingBag.svg" id="shoppingBagIcon-header" alt="Bolsa de compra - ícone">
             <div class="total-items-in-cart">
                 0
             </div>
-          </div>
-          <div class="shoppingBag-container">
-            <div class="shoppingBag-header">
-              <div class="column1">Item</div>
-              <div class="column2">Preço Uni.</div>
-              <div class="column3">Unidades</div>
-            </div>
-            <div class="shoppingBag-items">
-                <!-- Aqui renderizará os itens na Bolsa -->
-            </div>
-            <div class="shoppingBag-footer">
-                <div class="subtotal">
-                    Subtotal (0 items): $0
-                </div>
-                <div class="checkout">
-                    Proceed to checkout
-                </div>
-            </div>
-          </div>
         </article>
       </nav>
+      <article class="shoppingBag-container">
+        <div class="shoppingBag-header">
+          <button class="shoppingBag-btnClose">Fechar</button>
+          <h2>Suas compras</h2>
+        </div>
+        <div class="shoppingBag-content">
+          <div class="shoppingBag-items">
+              <!-- Aqui renderizará os itens na Bolsa -->
+          </div>
+        </div>
+        <div class="shoppingBag-footer">
+          <div class="subtotal">
+              Subtotal (0 items): $0
+          </div>
+          <div class="checkout">
+              Proceed to checkout
+          </div>
+      </div>
+      </article>
       <div id="mobile">
-        <a class="navbar-item" href="cart.html"><i class="fa-solid fa-bag-shopping"></i></a>
+        
         <span class="navbar-item"><i id="bar" class="fa-solid fa-outdent"></i></span>
       </div>
     </section>
