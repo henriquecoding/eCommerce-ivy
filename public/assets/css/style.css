@@ -82,6 +82,7 @@ p {
 
 .navbar {
   display: flex;
+  justify-content: flex-end;
   width: 90%;
   position: relative;
 }
@@ -98,6 +99,7 @@ p {
   height: 30px;
   font: var(--normal-font);
   border-radius: 5px;
+  position: relative;
 }
 
 .navbar-item {
@@ -292,6 +294,91 @@ p {
 
 #close {
   display: none;
+}
+
+/* Cupom de desconto */
+
+.coupons {
+  display: flex;
+  justify-content: center;
+  background-color: var(--color-black);
+}
+
+.coupons-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 15px 0;
+  width: 90%;
+}
+
+.coupons h2 {
+  color: var(--color-white);
+}
+
+.coupons h2 strong {
+  color: var(--color-green);
+}
+
+.coupon-btn {
+  color: var(--color-black);
+  background-color: var(--color-white);
+  border: 2px solid var(--color-secondary);
+  border-radius: 20px;
+  padding: 7px;
+  cursor: pointer;
+  position: relative;
+}
+
+.coupon-btn:active {
+  background-color: var(--color-secondary);
+}
+
+.coupon-btn::before {
+  content: 'Copiado';
+  position: absolute;
+  bottom: -40px;
+  right: 0;
+  background-color: var(--color-white);
+  box-shadow: var(--shadow);
+  padding: 7px 10px;
+  border-radius: 5px;
+  display: var(--beforeDisplay, none);
+}
+
+.coupon-btn::after {
+  content: '';
+  position: absolute;
+  bottom: -16px;
+  right: 20px;
+  width: 10px;
+  height: 10px;
+  background-color: var(--color-white);
+  transform: rotate(45deg);
+  display: var(--afterDisplay, none);
+}
+
+.coupon-btn strong {
+  font: var(--normal-font);
+}
+
+.buy-btn {
+  background: none;
+  border: none;
+}
+
+.buy-btn a {
+  padding: 5px;
+  font: 600 1.2rem 'Ubuntu', sans-serif;
+  text-decoration: none;
+  color: var(--color-black);
+  background-color: var(--color-secondary);
+}
+
+.buy-btn a:hover {
+  text-decoration: underline;
 }
 
 /* Homepage */
